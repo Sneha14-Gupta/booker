@@ -5,25 +5,25 @@ interface Book {
     rating: number
 }
 
-type Action = {
+type Action = | {
     type: "add";
     payload: { title: string, author: string }
 }
-{
-    type: "delete"
-    payload: { id: string }
-}
-{
-    type: "sort"
-}
-{
-    type: "like"
-    payload: { id: string }
-}
-{
-    type: "dislike"
-    payload: { id: string }
-}
+    | {
+        type: "delete";
+        payload: { id: string }
+    }
+    | {
+        type: "sort"
+    }
+    | {
+        type: "like"
+        payload: { id: string }
+    }
+    | {
+        type: "dislike"
+        payload: { id: string }
+    }
 
 
 //     {

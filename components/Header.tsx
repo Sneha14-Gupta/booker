@@ -5,7 +5,7 @@ import { CrownIcon } from 'lucide-react'
 
 function Header() {
     return (
-        <header className='flex items-center justify-between py-2 px-4 border-b border-forground mb-10 '>
+        <header className='flex items-center justify-between py-2 px-4 border-b border-forground  '>
             <CrownIcon className='h-6 w-6' />
 
             <ModeToggle />

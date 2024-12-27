@@ -2,7 +2,7 @@ import React, { FormEvent } from 'react'
 import { useRef } from 'react'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { ArrowDown, Cross } from 'lucide-react'
+import { ArrowDown10, Cross } from 'lucide-react'
 
 
 interface AddBookProps {
@@ -33,7 +33,7 @@ function AddBook({ dispatch }: AddBookProps) {
 
     }
     const handleSort = () => {
-        console.log('handleSort')
+        dispatch({ type: "sort" });
     }
 
 
@@ -45,7 +45,7 @@ function AddBook({ dispatch }: AddBookProps) {
             <div className='flex gap-2'>
 
                 <Button type="submit">Add <Cross /></Button>
-                <Button type="button" variant="outline" onClick={handleSort}>Sort <ArrowDown /></Button>
+                <Button type="button" variant="outline" onClick={handleSort}>Sort <ArrowDown10 /></Button>
             </div>
         </form>
     )

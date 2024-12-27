@@ -9,7 +9,7 @@ export const bookReducer = (state: Book[], action: Action) => {
             }
             return [...state, book]
         case "sort":
-            return state.sort((a, b) => a.rating - b.rating)
+            return [...state].sort((a, b) => b.rating - a.rating)
         case "delete":
             return state.filter((book) => book.id !== action.payload.id)
         case "like":
